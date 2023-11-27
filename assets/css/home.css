@@ -1,27 +1,93 @@
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 body {
     background-color: white;
 }
-div.contents {
-    display: flex;
-    flex-direction: row;
-    height: 300px;
-    margin: 10px
-}
 
 img {
     object-fit: cover;
 }
-#a {
+
+div.contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    flex-shrink: 0;
+    height: 320px;
+}
+
+#bannerImg {
     height: 300px;
     width: 100%;
 }
-#b {
+
+#imageDisplay {
+    display: flex;
+    flex-direction: row;
     height: 300px;
-    width: calc(100% - 800px);
+    overflow:scroll;
+}
+#imageList {
+    display: flex;
+    flex-direction: row;
+}
+#imageDisplay::-webkit-scrollbar {
+    display: none;
+}
+#left {
+    position:absolute;
+    top: 435px;
+    left: 10px;
+    height: 30px;
+    width: 40px;
+    border-radius: 15px;
+}
+#right {
+    position:absolute;
+    top: 435px;
+    right: 10px;
+    height: 30px;
+    width: 40px;
+    border-radius: 15px;
+}
+.images {
+    height: 280px;
+    object-fit: cover;
+}
+#ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 400px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#ranking ol {
+    padding-left: 20px;
+    font-size: larger;
+}
+
+#mission {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: calc(100% - 700px);
+    border: 1px solid black;
+}
+#mission img{
+    height: 298px;
+    width: 490px;
+    object-fit: cover;
+}
+
+#submit {
+    height: 300px;
+    width: 300px;
     border: 1px solid black;
     text-align: center;
     background-color: #242b62;
@@ -29,39 +95,49 @@ img {
     font-size: 32px;
     font-weight: bolder;
 }
-div.s {
-    display: flex;
-    flex-direction: row;
-    height: 300px;
-    margin: 10px;
-    margin-top: 30px;
-}
-#c, #d, #e {
-    margin: 5px;
-    padding: 10px;
-}
-#c {
-    height: 300px;
-    width: 300px;
-    border: 1px solid black;
-    background-color: white;
-}
-#d {
-    height: 300px;
-    width: 300px;
-    border: 1px solid black;
-    background-color: white;
-}
-#e {
-    display:block;
-    height: 300px;
-    width: calc(100% - 600px);
-    background-color: white;
-    color: white;
-    border: 1px solid black;
+
+
+
+@media screen and (max-width: 1560px){
+    #explain {
+        display:none;
+    }
+    #mission {
+        justify-content: space-around;
+        width: calc(74% - 300px);
+    }
+    #ranking {
+        width: 26%;
+    }
 }
 
-#e:first-child{
-    height: 100%;
-    width: 100%;
+@media screen and (max-width: 850px){
+    #bannerImg {
+        height:120px;
+    }
+    #left, #right {
+        display: none;
+    }
+    div.contents {
+        height:250px;
+    }
+    #mission {
+        width:250px;
+        height:250px;
+    }
+    #mission img{
+        width: 249px;
+        height: 248px;
+    }
+    #ranking {
+        display:none;
+    }
+    #explain {
+        display: none;
+    }
+    #submit {
+        height:250px;
+        width: calc(100% - 250px);
+        font-size: 4vw;
+    }
 }

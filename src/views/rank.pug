@@ -1,4 +1,6 @@
+include ./mixins/school.pug
 doctype html
+
 html(lang="en")
     head
         meta(charset="UTF-8")
@@ -8,7 +10,7 @@ html(lang="en")
     body
         h1 Ranking 
         a(href="/") Go back to home 
-        each s in schools
+        each s in school
             +school(s)
 
 

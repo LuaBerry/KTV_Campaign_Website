@@ -7,19 +7,34 @@ html(lang="en")
         link(rel="stylesheet", href="/assets/css/home.css")
     body
         section.banner
-            img#a(src="/assets/img/test_1920.jpeg", alt="")
+            img#bannerImg(src="/assets/img/test_1920.jpeg", alt="")
+        div#imageDisplay
+            div#imageList
+                input#left(type="button", value=" < ")
+                input#right(type="button", value=" > ")
+                img.images(src="/assets/img/1.jpg")
+                img.images(src="/assets/img/2.jpg")
+                img.images(src="/assets/img/3.jpg")
+                img.images(src="/assets/img/4.jpg")
+                img.images(src="/assets/img/5.jpg")
+                img.images(src="/assets/img/6.jpg")
+                img.images(src="/assets/img/7.jpg")
+                img.images(src="/assets/img/8.jpg")
+                img.images(src="/assets/img/9.jpg")
+                img.images(src="/assets/img/10.jpg")
         div.contents
-            div#e
-                h1 img
-            div#c
+            div#ranking
+                h2 순위
                 ol
                     li 한양대학교
                     li 한성대학교
                     li 한동대학교
-                li
-                    a(href="/rank") 모든 학교 보기
-            div#d
+                a(href="/rank") 모든 학교 보기
+            div#mission
                 img(src="/assets/img/mission.jpeg",)
-            input#b(type="button", value="접수하기", onclick="location.href='submit'")
+                span#explain 미션 설명
+            input#submit(type="button", value="접수하기", onclick="location.href='submit'")
+    
+    script(src="/assets/src/home.js") 
 
 
