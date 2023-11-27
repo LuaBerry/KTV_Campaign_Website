@@ -11,24 +11,40 @@ body {
 #content {
     display: flex;
     justify-content: center;
-    width: 70%;
+    align-items: center;
+    text-align:left;
+    width: 50%;
+    height: 500px;
     margin:10px;
     border: 1px solid gray;
     border-radius: 5px;
     
 }
-
+#schoolLabel, #imageLabel {
+    padding:0;
+    padding-left: 2px;
+    font-size: 14px;
+    color:rgb(94, 94, 94);
+}
 .inputs{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 .inputs *{
-    padding: 10px;
-    margin: 10px;
+    padding: 10px 10px;
+    margin: 5px 10px;
 }
 
 .inputs a{
     color:darkgray;
+}
+@media screen and (max-width: 650px) {
+    #content{
+        width:90%;
+    }
+    .inputs{
+        width:80%;
+    }
 }
