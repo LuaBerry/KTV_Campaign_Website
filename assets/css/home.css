@@ -5,15 +5,19 @@
 body {
     background-color: white;
 }
-div.f {
+div.contents {
     display: flex;
     flex-direction: row;
     height: 300px;
     margin: 10px
 }
+
+img {
+    object-fit: cover;
+}
 #a {
     height: 300px;
-    width: 800px;
+    width: 100%;
 }
 #b {
     height: 300px;

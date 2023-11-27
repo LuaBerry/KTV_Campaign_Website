@@ -3,5 +3,18 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Home | KTV Campaign
+        title submit | KTV Campaign
+        link(rel="stylesheet", href="/assets/css/submit.css")
     body 
+        div#content
+            form.inputs(action="/submit", method="post") 
+                input(name="name", placeholder="이름", required)
+                label(for="school") 학교
+                select#school(name="school", required)
+                    option(value="UIUC") 일리노이 어배너-샴페인 캠퍼스
+                    option(value="한양대학교") 한양대학교
+                    option(value="KIT") 카를스루에 공대
+                input(name="inst_id", placeholder="인스타그램 아이디", required)
+                lable(for="image") 캡쳐 사진 (png, jpeg 형식)
+                input#image(type="file", name="image" accept="image/png, image/jpeg")
+                a(href="/") back to home &rarr;
