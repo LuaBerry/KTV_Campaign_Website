@@ -1,1 +1,1 @@
-web:babel-node src
+web:babel-node src/init.js
