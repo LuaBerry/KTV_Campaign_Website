@@ -7,15 +7,17 @@ html(lang="en")
         link(rel="stylesheet", href="/assets/css/submit.css")
     body 
         div#content
-            form.inputs(action="/submit", method="post") 
-                input(name="name", placeholder="이름", required)
-                label#schoolLabel(for="school") 학교
+            form.inputs(action="/submit", method="post")
+                label.labels(for="name") 이름
+                input#name(name="name", placeholder="이름", required)
+                label.labels(for="instId") 인스타그램 아이디
+                input#instId(name="inst_id", placeholder="인스타그램 아이디", require)
+                label.labels(for="school") 학교
                 select#school(name="school", required)
                     each s in school
                         option(value=s)=s
                     input.manual(name="school")
-                input(name="inst_id", placeholder="인스타그램 아이디", require)
-                label#imageLabel(for="image") 캡쳐 사진 (png, jpeg 형식)
+                label.labels(for="image") 캡쳐 사진 (png, jpeg 형식)
                 input#image(type="file", name="image" accept="image/png, image/jpeg")
                 input(type="submit", value="제출하기")
                 a(href="/") back to home &rarr;

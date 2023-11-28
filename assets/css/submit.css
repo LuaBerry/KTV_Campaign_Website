@@ -14,15 +14,16 @@ body {
     align-items: center;
     text-align:left;
     width: 50%;
-    height: 500px;
+    height: 600px;
     margin:10px;
     border: 1px solid gray;
     border-radius: 5px;
     
 }
-#schoolLabel, #imageLabel {
+.inputs .labels{
     padding:0;
-    padding-left: 2px;
+    padding-left: 10px;
+    margin-bottom: 0;
     font-size: 14px;
     color:rgb(94, 94, 94);
 }
@@ -34,7 +35,7 @@ body {
 
 .inputs *{
     padding: 10px 10px;
-    margin: 5px 10px;
+    margin: 3px 10px 15px;
 }
 
 .inputs a{
