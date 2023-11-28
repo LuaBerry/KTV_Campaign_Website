@@ -4,6 +4,7 @@ export const home = (req, res) => {
 
 
 const school = [
+"직접 입력",
 "가야대학교",
 "가천대학교",
 "가톨릭관동대학교",

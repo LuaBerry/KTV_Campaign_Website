@@ -13,8 +13,10 @@ html(lang="en")
                 select#school(name="school", required)
                     each s in school
                         option(value=s)=s
+                    input.manual(name="school")
                 input(name="inst_id", placeholder="인스타그램 아이디", require)
                 label#imageLabel(for="image") 캡쳐 사진 (png, jpeg 형식)
                 input#image(type="file", name="image" accept="image/png, image/jpeg")
                 input(type="submit", value="제출하기")
                 a(href="/") back to home &rarr;
+        script(src="/assets/src/submit.js") 
